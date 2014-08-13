@@ -1,6 +1,6 @@
 name: cpp11
 version: 0.0.0
-inherits: wercker/default@0.0.3
+inherits: wercker/default@0.0.2
 type: main
 platform: ubuntu@12.04
 description: Wercker box for C11 and C++11 development
@@ -17,10 +17,10 @@ packages:
     - clang@3.4.2
     - gcc@4.8.1
     - binutils@2.24
+    - make@4.0
     - automake@1.14.1
     - autoconf@2.69
     - libtool@2.4.2
-    - make@4.0
 
 script: |
     sudo apt-get purge make gcc
@@ -28,12 +28,16 @@ script: |
     sudo add-apt-repository -y 'deb http://llvm.org/apt/precise/ llvm-toolchain-precise-3.4 main'
     wget -q -O - http://llvm.org/apt/llvm-snapshot.gpg.key | sudo apt-key add -
     sudo add-apt-repository -y ppa:asolovets/backports
-    sudo apt-get -qq update
+    sudo apt-get update
     sudo apt-get install binfmt-support build-essential binutils -y
     sudo apt-get install gcc-4.8 -y
     sudo apt-get install clang-3.4 clang-3.4-doc libclang-common-3.4-dev libclang-3.4-dev libclang1-3.4 libclang1-3.4-dbg libllvm-3.4-ocaml-dev libllvm3.4 libllvm3.4-dbg lldb-3.4 llvm-3.4 llvm-3.4-dev llvm-3.4-doc llvm-3.4-examples llvm-3.4-runtime clang-modernize-3.4 clang-format-3.4 python-clang-3.4 lldb-3.4-dev
     sudo apt-get install automake=2.69 autoconf-1.14 libtool make -y
+    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 99
+    sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.4 99
     ld --version
     gcc --version
+    clang --version
     automake --version
-    llc-3.0 --version || true
+    autoconf --version
+    libtool --version
