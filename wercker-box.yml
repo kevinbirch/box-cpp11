@@ -17,7 +17,7 @@ packages:
     - clang@3.4.2
     - gcc@4.8.1
     - binutils@2.22
-    - make@4.0
+    - make@3.81
     - automake@1.14.1
     - autoconf@2.69
     - libtool@2.4.2
@@ -40,6 +40,7 @@ script: |
     gcc --version
     g++ --version
     clang --version
+    make --version
     automake --version
     autoconf --version
     libtool --version
