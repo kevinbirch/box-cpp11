@@ -1,5 +1,5 @@
 name: cpp11
-version: 0.0.1
+version: 0.0.2
 inherits: wercker/default@0.0.2
 type: main
 platform: ubuntu@12.04
@@ -16,7 +16,7 @@ packages:
     - llvm@3.4.2
     - clang@3.4.2
     - gcc@4.8.1
-    - binutils@2.24
+    - binutils@2.22
     - make@4.0
     - automake@1.14.1
     - autoconf@2.69
