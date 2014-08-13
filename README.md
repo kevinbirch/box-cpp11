@@ -8,7 +8,7 @@
 - Autoconf 2.69
 - libtool 2.4.2
 - GNU Make 4.0
-- binutils 2.24
+- binutils 2.22
 - GCC 4.8+
 - Clang 3.4+
 
