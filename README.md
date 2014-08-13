@@ -2,6 +2,8 @@
 
 [Wercker](http://wercker.com) box for C11/C++11 with Autotools, GGC and Clang.
 
+[![wercker status](https://app.wercker.com/status/02cae953135ef6db0882250a1368af90/s "wercker status")](https://app.wercker.com/project/bykey/02cae953135ef6db0882250a1368af90)
+
 ## Provided Packages
 
 - Automake 1.14.1
