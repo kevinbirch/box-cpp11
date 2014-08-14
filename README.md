@@ -20,6 +20,10 @@ The MIT License
 
 ## Changelog
 
+### 0.0.3
+
+Tested and working
+
 ### 0.0.0
 
 Pre-release version
